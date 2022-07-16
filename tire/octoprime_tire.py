@@ -6,7 +6,7 @@ class OctoprimeTire(Tire):
         self.tire_state = tire_state
     
     def tire_should_be_serviced(self):
-        if sum(self.tire_state) >= 3:
+        if sum(self.tire_state) >= 3.0:
             return True
         else:
             return False

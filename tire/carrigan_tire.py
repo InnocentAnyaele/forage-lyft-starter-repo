@@ -7,6 +7,8 @@ class CarriganTire(Tire):
         self.tire_state = tire_state
 
     def tire_should_be_serviced(self):
-        if sum(self.tire_state) >= 0.9:
-            return True
-        else: return False
+        for tire in self.tire_state:
+            if tire >= 0.9:
+                return True
+        return False
+
